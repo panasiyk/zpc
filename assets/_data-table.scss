@@ -1,0 +1,39 @@
+.data-table {
+  &--footer {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .v-pagination {
+    justify-content: flex-start !important;
+  }
+
+  &--header-cell {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .label {
+      white-space: nowrap;
+    }
+
+    .sorting {
+      margin-left: 8px;
+      opacity: 0.4;
+    }
+
+    .sorting.is-current {
+      opacity: 1;
+    }
+  }
+
+  .sorting:hover {
+    opacity: 1;
+  }
+
+  tr {
+    cursor: pointer;
+  }
+}

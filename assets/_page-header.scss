@@ -1,0 +1,150 @@
+@import "variables";
+
+.page-header {
+  padding: 0 32px;
+
+  &.v-toolbar {
+    width: 100%;
+  }
+
+  .v-toolbar__content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: flex;
+    width: 100%;
+  }
+
+  &--title {
+    font-size: 24px;
+    font-weight: normal;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+
+  &--button-container {
+
+  }
+
+  &--button {
+    font-weight: bold;
+    padding: 20px 12px !important;
+    color: white !important;
+    text-transform: initial !important;
+    margin-right: 24px;
+  }
+
+  &--filter-input-container {
+    margin-right: 15px;
+    flex: 1;
+
+    .v-input {
+      background-color: #eee;
+
+      .v-input__prepend-inner {
+        margin: 0 !important;
+        align-self: center;
+
+        .filters-button {
+          color: $primary-color;
+          font-size: 14px;
+          background-color: #ecf5ff;
+          border-color: $primary-color;
+          display: inline-block;
+          height: 32px;
+          padding: 0 10px;
+          line-height: 30px;
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  &--dropdown-button {
+    width: 40px !important;
+    height: 40px !important;
+
+    &.columns {
+      border: 1px solid $primary-color;
+      margin-right: 40px;
+
+      .v-icon {
+        color: $primary-color !important;
+      }
+    }
+
+    &.user {
+      border-radius: 50% !important;
+      background-color: $primary-color;
+
+      .v-icon {
+        color: white !important;
+      }
+    }
+
+    &.user:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  &--filters-container {
+    .filters-container {
+      display: flex;
+    }
+
+    .filter-label {
+      cursor: pointer;
+      padding: 8px 0;
+      font-size: 13px;
+      line-height: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      &.selected {
+        background-color: #ecf5ff;
+      }
+    }
+
+    .filter-label:last-of-type {
+      border-bottom: none;
+    }
+
+    .filter-label:hover {
+      color: $primary-color;
+    }
+
+    .labels-container {
+      min-width: 150px;
+      background-color: rgba(216, 219, 225, 0.1);
+      padding: 8px 0 8px 8px;
+
+      &.selected-filter {
+        margin-right: 8px;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .value-container {
+      min-width: 220px;
+      padding: 8px 8px 8px 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 8px;
+
+        .v-btn--plain {
+          padding: 0;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

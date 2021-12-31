@@ -1,0 +1,87 @@
+@import "../variables";
+@import "../mixins";
+
+$gray-color: #D7D7D7;
+$light-gray-color: #F6F6F6;
+
+.promotion-wizard__header {
+  background-color: $light-gray-color !important;
+  display: flex;
+
+  @include cardShadowAndRadius
+}
+
+.promotion-wizard__header__item {
+  min-height: 50px;
+  display: inline-flex;
+  line-height: 1;
+
+  .promotion-wizard__header__item__content {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+
+    .promotion-wizard__header__item__point {
+      height: 29px;
+      width: 29px;
+      background-color: $gray-color;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+      margin: 11px 10px 10px 0;
+    }
+
+    .promotion-wizard__header__item__label {
+      font-size: 18px;
+      font-weight: normal;
+      color: $gray-color;
+    }
+  }
+
+  &--active {
+    background-color: white;
+    margin: 0;
+
+    .promotion-wizard__header__item__content {
+      margin-right: -15px;
+      margin-left: -10px;
+    }
+
+    .promotion-wizard__header__item__point {
+      background-color: $primary-color !important;
+    }
+
+    .promotion-wizard__header__item__label {
+      color: $primary-color !important;
+    }
+
+    .promotion-wizard__header__item__content::after {
+      content: "";
+      border: 25px solid $light-gray-color;
+      border-left: 25px solid white;
+    }
+
+    .promotion-wizard__header__item__content::before {
+      content: "";
+      border: 25px solid white;
+      border-left: 25px solid $light-gray-color;
+    }
+  }
+}
+
+.promotion-wizard__header__item:first-of-type {
+  padding-left: 10px;
+  border-radius: $defaultRadius;
+
+  .promotion-wizard__header__item__content {
+    margin-left: 0 !important;
+  }
+
+  .promotion-wizard__header__item__content::before {
+    display: none;
+  }
+}

@@ -1,0 +1,71 @@
+@import './vars'
+
+.topbar__title
+  font-size: 24px
+  font-weight: normal
+  margin-right: 35px
+  white-space: nowrap
+
+.grey-block
+  &__row
+    &:first-of-type
+      &.grey-block__row--bordered
+        padding-bottom: 12px
+    &:nth-of-type(2)
+      padding-top: 23px
+      padding-bottom: 27px
+
+.create-action
+  &__title
+    font-size: 15px
+    color: #909399
+    width: 100%
+    padding-bottom: 16px
+    display: block
+
+  &__segment
+    display: flex
+    align-items: center
+    width: 100%
+    .grey-block__label
+      white-space: nowrap
+      margin-right: 30px
+    &-container
+      min-height: 42px
+      background: $white
+      border: 1px solid #E2E2E3
+      border-radius: 4px
+      padding: 2px 4px
+      width: 100%
+      display: flex
+      align-items: center
+    .el-button
+      margin-left: auto
+      font-size: 11px
+      font-weight: bold
+      padding: 7px 20px 7px 12px
+      ::v-deep span
+        margin-left: 10px
+    .el-tag
+      font-size: 14px
+      color: #606266
+
+
+  &__btns
+    margin-top: 16px
+    .el-button
+      padding: 12px 23px
+      font-weight: bold
+      &--default
+        color: $blue
+        border-color: $blue
+        padding: 12px 32px
+      &--info
+        background: transparent
+        color: #D7D7D7
+        border-color: #D7D7D7
+        padding: 12px 32px
+        &:hover
+          color: $blue
+          border-color: $blue
+          background-color: #ecf5ff

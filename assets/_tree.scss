@@ -1,0 +1,13 @@
+.tree {
+  .v-treeview-node--active {
+    background-color: #409EFF;
+
+    .v-icon, .v-treeview-node__label {
+      color: white !important;
+    }
+  }
+
+  .is-current-selected-folder {
+    color: #409EFF;
+  }
+}

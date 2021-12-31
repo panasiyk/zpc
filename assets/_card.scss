@@ -1,0 +1,29 @@
+@import "mixins";
+
+.v-card {
+  @include cardShadowAndRadius
+}
+
+.auth-card {
+  min-width: 80%;
+  max-width: 100%;
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .forgot-password {
+      padding: 0;
+    }
+  }
+}
+
+.card-with-title {
+  background-color: white;
+
+  .v-card__title {
+    font-size: 15px;
+    color: #909399;
+  }
+}

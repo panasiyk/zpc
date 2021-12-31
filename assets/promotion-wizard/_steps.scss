@@ -1,0 +1,67 @@
+@import "../variables";
+
+.promotion-wizard__step {
+  .main-area {
+    background-color: #F2F2F2 !important;
+  }
+
+  .v-input {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .name {
+    .v-text-field__slot {
+      min-height: 40px;
+    }
+  }
+
+  .dates {
+    .date {
+      .v-input {
+        max-width: 216px;
+      }
+    }
+
+    .checkbox {
+    }
+  }
+
+  .point-switcher {
+    flex: 2;
+  }
+
+  .segment-select-input {
+    flex: 6;
+
+    .v-input__append-inner {
+      margin: 5px 0 !important;
+      align-self: center;
+    }
+
+    .label {
+      flex: 2
+    }
+
+    .select-container {
+      flex: 12;
+    }
+  }
+
+  .box-with-checkboxes {
+    flex: 1;
+
+    .box-inner {
+      background-color: white;
+
+      .checkboxes-container {
+        overflow: scroll;
+        max-height: 118px;
+      }
+    }
+  }
+
+  .box-with-checkboxes:not(:last-child) {
+    margin-right: 32px;
+  }
+}

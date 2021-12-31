@@ -1,0 +1,6 @@
+@import "variables";
+
+@mixin cardShadowAndRadius {
+  box-shadow: 0 2px 12px rgb(0 0 0 / 12%) !important;
+  border-radius: $defaultRadius !important;
+}

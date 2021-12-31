@@ -1,0 +1,31 @@
+.v-btn {
+  border-radius: 4px !important;
+  text-transform: initial !important;
+}
+
+.v-btn--icon:hover {
+  background-color: #ecf5ff;
+}
+
+.btn-with-dropdown {
+  display: flex;
+
+  .v-btn {
+    background-color: #1976d2 !important;
+    color: white !important;
+  }
+
+  .main-btn {
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-right: 1px solid !important;
+    border-color: rgba(255,255,255,.5) !important;
+  }
+
+  .dropdown-btn {
+    padding: 0 !important;
+    min-width: 33px !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+  }
+}

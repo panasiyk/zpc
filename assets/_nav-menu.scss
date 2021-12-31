@@ -1,0 +1,46 @@
+.nav-menu {
+  &--logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--link {
+    color: white !important;
+
+    img {
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+
+  &--group-item {
+    img {
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+
+  .v-list-item__title {
+    color: white !important;
+  }
+
+  .v-icon {
+    color: white !important;
+  }
+
+  .v-list-item--active:not(.nav-menu--header-item), .v-list-item:hover {
+    background-color: #035FCA;
+  }
+
+  .nav-menu--header-item {
+    color: #0B3E79 !important;
+  }
+
+  .v-list-item {
+    justify-content: flex-start !important;
+  }
+}

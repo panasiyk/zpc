@@ -1,0 +1,177 @@
+@import './vars'
+
+@font-face
+  font-family: "PingFang SC"
+  src: local("PingFang SC"), url('../fonts/PingFang-SC-Regular.ttf') format("truetype")
+
+@font-face
+  font-family: "PingFang SC"
+  font-weight: bold
+  src: local("PingFang SC"), url('../fonts/PingFang-SC-Bold.ttf') format("truetype")
+
+@font-face
+  font-family: "Helvetica Neue"
+  src: local("Helvetica Neue"), url('../fonts/HelveticaNeueCyr-Roman.ttf') format("truetype")
+
+@font-face
+  font-family: "Helvetica Neue"
+  font-weight: bold
+  src: local("Helvetica Neue"), url('../fonts/HelveticaNeueCyr-Bold.ttf') format("truetype")
+
+@font-face
+  font-family: "Helvetica Neue"
+  font-weight: 900
+  src: local("Helvetica Neue"), url('../fonts/HelveticaNeueCyr-Black.ttf') format("truetype")
+
+*::-webkit-scrollbar
+  width: 3px
+  height: 3px
+
+*::-webkit-scrollbar-track
+  background: #ddd
+
+*::-webkit-scrollbar-thumb
+  background: $black
+
+*
+  scrollbar-base-color: #ddd
+  scrollbar-face-color: $black
+  scrollbar-3dlight-color: transparent
+  scrollbar-highlight-color: transparent
+  scrollbar-track-color: transparent
+  scrollbar-arrow-color: $black
+  scrollbar-shadow-color: transparent
+  scrollbar-dark-shadow-color: transparent
+
+.el-header
+  padding: 0
+
+.content-block
+  background: $white
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .12)
+  border-radius: 4px
+  overflow: hidden
+  padding: 16px 24px 24px 21px
+
+.no-wrap
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+  .cell
+    white-space: nowrap
+    text-overflow: ellipsis !important
+    overflow: hidden
+
+.el-checkbox__input
+  .el-checkbox__inner,
+  &.is-indeterminate .el-checkbox__inner
+    width: 16px
+    height: 16px
+    background-color: $white
+    border-color: #DCDFE6
+
+    &:after
+      width: 5px
+      height: 9px
+
+    &:before
+      background-color: $blue
+      top: 6px
+
+  &.is-checked
+    .el-checkbox__inner
+      background-color: $white
+      border-color: #DCDFE6
+
+      &:after
+        border-color: $blue
+
+.el-main
+  padding: 26px 35px 26px 29px
+
+.el-table
+  .el-checkbox__input
+    &.is-indeterminate
+      .el-checkbox__inner
+        &:before
+          display: none
+
+  td.table-actions
+    &__name
+      color: $blue
+
+  .sort-caret
+    border: 0
+    width: 10px
+    height: 6px
+    display: none
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' width='10px' height='6px' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(1 0 0 1 -309 -126 )'%3E%3Cpath d='M 9.89979959919845 0.618556701030909 C 9.96659986639952 0.687285223367597 10 0.766323024055014 10 0.855670103092686 C 10 0.945017182130594 9.96659986639952 1.02405498281777 9.89979959919845 1.0927835051547 L 5.2304609218437 5.89690721649485 C 5.16366065464263 5.96563573883154 5.08684034736143 6 5 6 C 4.91315965263857 6 4.83633934535737 5.96563573883154 4.7695390781563 5.89690721649485 L 0.100200400801555 1.0927835051547 C 0.0334001336004803 1.02405498281777 0 0.945017182130594 0 0.855670103092686 C 0 0.766323024055014 0.0334001336004803 0.687285223367597 0.100200400801555 0.618556701030909 L 0.601202404809669 0.103092783505152 C 0.66800267201063 0.034364261168462 0.744822979291939 0 0.831663326653256 0 C 0.918503674014687 0 0.995323981295883 0.034364261168462 1.06212424849696 0.103092783505152 L 5 4.15463917525777 L 8.93787575150304 0.103092783505152 C 9.00467601870412 0.034364261168462 9.08149632598531 0 9.16833667334674 0 C 9.25517702070806 0 9.33199732798937 0.034364261168462 9.39879759519033 0.103092783505152 L 9.89979959919845 0.618556701030909 Z ' fill-rule='nonzero' fill='%23797979' stroke='none' transform='matrix(1 0 0 1 309 126 )' /%3E%3C/g%3E%3C/svg%3E")
+
+    &.descending
+      bottom: 14px
+
+    &.ascending
+      top: 12px
+      transform: rotate(180deg)
+
+  .descending
+    .sort-caret
+      &.descending
+        display: block
+
+  .ascending
+    .sort-caret
+      &.ascending
+        display: block
+
+  th
+    padding: 7px 0
+
+    & > .cell
+      font-family: $helvetica
+      font-weight: 900
+      font-size: 13px
+
+  td
+    padding: 6px 0 !important
+
+  &-column--selection .cell
+    padding-left: 7px !important
+    padding-right: 0 !important
+
+  .cell
+    text-overflow: unset
+
+.table-actions
+  &__date
+    font-size: 14px
+    &.el-tag--info
+      color: #909399
+      border-color: #909399
+      background: rgba(0, 0, 0, .12)
+  &__dropdown
+    padding: 5px 0
+  &__row-controls .cell
+    padding: 0 !important
+
+.grey-block
+  background-color: #F2F2F2
+  border-radius: 4px
+  padding: 14px 20px
+
+  &__row
+    display: flex
+    align-items: center
+    width: 100%
+
+    &--bordered
+      border-bottom: 1px solid #DCDFE6
+
+  &__label
+    font-size: 15px
+    color: #909399
+    margin-right: 14px
+
+.el-table__empty-block
+  width: 100%!important

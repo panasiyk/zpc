@@ -1,0 +1,85 @@
+@import "vars"
+.topbar__btns
+  margin-right: 24px
+
+  .el-dropdown
+    display: block
+
+  .el-button
+    &--primary
+      font-weight: bold
+      padding: 12px 17px 12px 13px
+      background-color: $blue
+      border-color: $blue
+      &:hover,
+      &:focus
+        background-color: darken($blue, 5)
+        border-color: darken($blue, 5)
+
+      i
+        font-size: 17px
+        line-height: 0
+        font-weight: 900
+
+    &--default
+      color: #D7D7D7
+      border-color: #D7D7D7
+
+      i
+        margin-left: 8px
+
+    &-group
+      display: flex
+
+      .el-button--primary
+        padding: 12px 14px 12px 19px
+
+        &.el-dropdown__caret-button
+          padding: 15px 7px 9px 8px
+
+          &:before
+            width: 2px
+
+  &-dropdown
+    min-width: 181px
+    padding: 3px 0
+
+    .el-dropdown-menu__item
+      font-weight: bold
+      font-size: 13px
+
+    .popper__arrow
+      right: 10px !important
+      left: auto !important
+
+  & + .topbar__settings
+    margin-left: auto
+
+.table-actions
+  &__buttons
+    .el-button--primary
+      font-size: 14px
+      font-weight: bold
+      padding: 10px 18px
+    .is-disabled
+      color: #DCDFE6
+      background: transparent
+      border-color: #DCDFE6
+      &:hover,
+      &:focus
+        color: #DCDFE6
+        background: transparent
+        border-color: #DCDFE6
+    .el-input
+      &.is-disabled
+        .el-input__inner
+          background: transparent
+          border-color: #DCDFE6
+          &::placeholder
+            color: #DCDFE6
+    .el-button
+      i
+        margin-left: 10px
+      &--default
+        border-color: $grey
+
