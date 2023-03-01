@@ -3,13 +3,20 @@ name: Update CDN version
 on:
   workflow_dispatch:
     inputs:
-      my_input:
+      status:
         description: 'My Input Description'
         required: true
 
 jobs:
-  my_job:
+  successful_status:
+    if: ${{ github.event.inputs.status == 'successful' }}
     runs-on: ubuntu-latest
     steps:
-      - name: My Step
-        run: echo "Hello, ${{ github.event.inputs.my_input }}!"
+      - name: Update version status
+        run: echo "Status is successful"
+  failed_status:
+    if: ${{ github.event.inputs.status == 'failed' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update version status
+        run: echo "Status is failed"
