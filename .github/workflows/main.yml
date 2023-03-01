@@ -12,8 +12,19 @@ jobs:
     if: ${{ github.event.inputs.status == 'successful' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checking out a repo ${{ github.repository }}
+        uses: actions/checkout@v3
+        with:
+          token: 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
+          fetch-depth: 0
 
-
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          registry-url: 'https://npm.pkg.github.com'
+          
       - name: Update version
         run: npm version patch
 
