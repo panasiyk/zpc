@@ -11,7 +11,15 @@ jobs:
   successful_status:
     if: ${{ github.event.inputs.status == 'successful' }}
     runs-on: ubuntu-latest
-    steps:          
+    steps: 
+    
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        env:
+          GITHUB_TOKEN: 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
+          
       - name: Checking out a repo ${{ github.repository }}
         uses: actions/checkout@v3
         with:
