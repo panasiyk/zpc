@@ -12,8 +12,29 @@ jobs:
     if: ${{ github.event.inputs.status == 'successful' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: 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
+
+      - name: Update version
+        run: npm version patch
+
+
+      - name: Commit & Push build
+        uses: CasperWA/push-protected@v2
+        with:
+          token: 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
+          branch: ${{ github.head_ref || github.ref_name }}
+          unprotect_reviews: true
+          tags: false
+
       - name: Update version status
         run: echo "Status is successful"
+        
   failed_status:
     if: ${{ github.event.inputs.status == 'failed' }}
     runs-on: ubuntu-latest
