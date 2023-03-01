@@ -18,7 +18,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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 
 
       - name: Update version
         run: npm version patch
@@ -27,7 +27,7 @@ jobs:
       - name: Commit & Push build
         uses: CasperWA/push-protected@v2
         with:
-          token: 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
+          token: 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 
           branch: ${{ github.head_ref || github.ref_name }}
           unprotect_reviews: true
           tags: false
