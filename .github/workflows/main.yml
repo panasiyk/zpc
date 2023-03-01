@@ -12,6 +12,14 @@ jobs:
     if: ${{ github.event.inputs.status == 'successful' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: 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
+          
       - name: Checking out a repo ${{ github.repository }}
         uses: actions/checkout@v3
         with:
