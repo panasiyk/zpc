@@ -1,0 +1,15 @@
+name: Update CDN version
+
+on:
+  workflow_dispatch:
+    inputs:
+      my_input:
+        description: 'My Input Description'
+        required: true
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My Step
+        run: echo "Hello, ${{ github.event.inputs.my_input }}!"
